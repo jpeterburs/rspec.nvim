@@ -132,7 +132,7 @@ function M.run_rspec()
   end
 
   running = true
-  vim.diagnostics.reset(namespace, 0)
+  vim.diagnostic.reset(namespace, 0)
   job_id = vim.fn.jobstart(command(), {
     cwd = vim.fn.getcwd(),
     on_exit = function (_, exit_code, _)
