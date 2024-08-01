@@ -115,7 +115,7 @@ local function add_failed_examples_to_diagnostics()
         col = 0,
         severity = vim.diagnostic.severity.ERROR,
         source = 'rspec.nvim',
-        message = example.execution.message
+        message = example.exception.message
       })
     end
 
