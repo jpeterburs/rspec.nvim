@@ -3,7 +3,7 @@ local runner = require('rspec.runner')
 
 local M = {}
 
-function M.run_ruccent_file()
+function M.run_current_file()
   local bufname = vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf())
 
   if not config.allowed_file_format(bufname) then
