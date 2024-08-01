@@ -113,13 +113,13 @@ local function add_failed_examples_to_diagnostics()
         bufnr = vim.fn.bufnr(example.file_path),
         lnum = example.line_number - 1,
         col = 0,
-        severity = vim.diagnostics.severity.ERROR,
+        severity = vim.diagnostic.severity.ERROR,
         source = 'rspec.nvim',
         message = example.execution.message
       })
     end
 
-    vim.diagnostics.set(namespace, 0, diagnostics)
+    vim.diagnostic.set(namespace, 0, diagnostics)
   end
 end
 
