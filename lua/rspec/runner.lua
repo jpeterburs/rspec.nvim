@@ -133,6 +133,7 @@ function M.run_rspec()
 
   running = true
   vim.diagnostic.reset(namespace, 0)
+  vim.notify('[rspec.nvim] running RSpec...', vim.log.levels.INFO)
   job_id = vim.fn.jobstart(command(), {
     cwd = vim.fn.getcwd(),
     on_exit = function (_, exit_code, _)
