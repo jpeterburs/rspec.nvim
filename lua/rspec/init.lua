@@ -22,9 +22,9 @@ end
 function M.setup(user_config)
   config.setup(user_config)
 
-  vim.api.nvim_set_hl(0, 'rspec_passed', { fg = '#40a02b'})
-  vim.api.nvim_set_hl(0, 'rspec_failed', { fg = '#d20f39'})
-  vim.api.nvim_set_hl(0, 'rspec_aborted', { fg = '#d20f39'})
+  vim.api.nvim_set_hl(0, 'rspec_passed', { fg = '#40a02b' })
+  vim.api.nvim_set_hl(0, 'rspec_failed', { fg = '#d20f39' })
+  vim.api.nvim_set_hl(0, 'rspec_aborted', { fg = '#d20f39' })
 
   vim.cmd("command! RSpec lua require('rspec').run_current_file()<CR>")
   vim.cmd("command! RSpecAbort lua require('rspec').abort()<CR>")

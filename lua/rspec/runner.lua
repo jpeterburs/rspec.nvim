@@ -40,7 +40,7 @@ local function build_summary_chunk(exit_code)
 
   local message = messages[exit_code] or messages['default']
 
-  return { string.format("[rspec.nvim] %s : %s", message.label, message.text), message.hl_group}
+  return { string.format("[rspec.nvim] %s : %s", message.label, message.text), message.hl_group }
 end
 
 --- Returns list of ancestor paths from current working dir.
@@ -105,7 +105,7 @@ local function add_failed_examples_to_diagnostics()
 
   if last_result().examples then
     local failed_examples = vim.tbl_filter(function(examples)
-    return examples.status == 'failed'
+      return examples.status == 'failed'
     end, last_result().examples)
 
     for _, example in ipairs(failed_examples) do
@@ -136,7 +136,7 @@ function M.run_rspec()
   vim.notify('[rspec.nvim] running RSpec...', vim.log.levels.INFO)
   job_id = vim.fn.jobstart(command(), {
     cwd = vim.fn.getcwd(),
-    on_exit = function (_, exit_code, _)
+    on_exit = function(_, exit_code, _)
       notify_summary(exit_code)
 
       if exit_code == 1 then
