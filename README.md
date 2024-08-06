@@ -4,7 +4,7 @@ RSpec runner for Neovim. Written in lua.
 
 ## Installation
 
-### [lazy.nvim](https://github.com/floke/lazy.nvim)
+### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
