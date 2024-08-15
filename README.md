@@ -17,11 +17,11 @@ RSpec runner for Neovim. Written in lua.
 
 ### Commands
 
-|Command     |Description|
-|------------|------------------------------|
-|`RSpec`     |Run rspec on the current file.|
-|`RSpecAbort`|Kill running rspec process.   |
-|`RSpecClear`|Reset diagnostic output.      |
+| Command      | Description                    |
+| ------------ | ------------------------------ |
+| `RSpec`      | Run rspec on the current file. |
+| `RSpecAbort` | Kill running rspec process.    |
+| `RSpecClear` | Reset diagnostic output.       |
 
 ## License
 
