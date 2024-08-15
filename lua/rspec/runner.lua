@@ -160,4 +160,8 @@ function M.abort()
   end
 end
 
+function M.clear()
+  vim.diagnostic.reset(namespace, 0)
+end
+
 return M

@@ -18,6 +18,10 @@ function M.abort()
   runner.abort()
 end
 
+function M.clear()
+  runner.clear()
+end
+
 --- @param user_config table
 function M.setup(user_config)
   config.setup(user_config)
@@ -28,6 +32,7 @@ function M.setup(user_config)
 
   vim.cmd("command! RSpec lua require('rspec').run_current_file()<CR>")
   vim.cmd("command! RSpecAbort lua require('rspec').abort()<CR>")
+  vim.cmd("command! RSpecClear lua require('rspec').clear()<CR>")
 end
 
 return M
