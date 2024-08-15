@@ -91,7 +91,7 @@ local function command()
 end
 
 --- Notify a summery of RSpec execution
---- @params exit_code integer
+--- @param exit_code integer
 local function notify_summary(exit_code)
   local summary_chunks = build_summary_chunk(exit_code)
 
